@@ -1,0 +1,30 @@
+{
+  "executionDetails": {
+    "appium_js_path": "/usr/local/bin/appium",
+    "appium_node_path": "/usr/local/bin/node",
+    "monitoring":true
+  },
+  "testFeed":[
+    {
+      "belongsTo":"optimus",
+      "runsOn": "any",
+      "appDir": "app",
+      "nativeApp":true,
+      "optimusDesiredCapabilities": {
+        "appiumServerCapabilities": {
+          "app": "Target.apk",
+          "platformName": "Android"
+        },
+        "androidOnlyCapabilities": {
+          "appActivity": "activity.NavigationActivity",
+          "appPackage": "com.target.ui",
+          "avdLaunchTimeout": 300000,
+          "useKeystore": false
+        }
+      },
+      "deviceState": {
+        "captureVideo": true
+      }
+    }
+  ]
+}
