@@ -1,7 +1,7 @@
-Feature: Say Hello to Optimus
+Feature: Tests on target app
 
   @helloOptimus
-  Scenario: Hello Optimus
+  Scenario: Search for a product and view the product in detail
     Given user in on landing and chooses to get started
     And user chooses to skip login
     And user allows required permissions
@@ -9,5 +9,5 @@ Feature: Say Hello to Optimus
     Then user verifies search results
 
   @helloOptimus
-  Scenario: Swipe on the launch screen
+  Scenario: Swipe right on the launch screen till the end
     Given user swipes right to see all screens
