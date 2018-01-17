@@ -10,17 +10,14 @@ import steps.BaseSteps;
 import java.util.concurrent.TimeUnit;
 
 public class LaunchPage extends BasePage {
+    public static final String MESSAGE = "Welcome to Optimus!! You are all ready to experience Automation like never before.";
     private AppiumDriver driver;
-
-
     @FindBy(id = "first_run_get_started_button")
     private WebElement getStarted;
 
-
-    public static final String MESSAGE = "Welcome to Optimus!! You are all ready to experience Automation like never before.";
     public LaunchPage(AppiumDriver driver) {
         super(driver);
-        PageFactory.initElements(driver,this);
+        PageFactory.initElements(driver, this);
         this.driver = driver;
     }
 
@@ -31,6 +28,11 @@ public class LaunchPage extends BasePage {
 
     public void swipeRightOnLaunchScreen() throws InterruptedException {
         swipeRightToLeft();
+        TimeUnit.SECONDS.sleep(1);
+    }
+
+    public void swipeLeftOnLaunchScreen() throws InterruptedException {
+        swipeLeftToRight();
         TimeUnit.SECONDS.sleep(1);
     }
 

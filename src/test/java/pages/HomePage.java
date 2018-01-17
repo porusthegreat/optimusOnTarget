@@ -8,15 +8,8 @@ import org.openqa.selenium.support.PageFactory;
 
 import java.util.List;
 
-public class HomePage extends BasePage{
+public class HomePage extends BasePage {
     private AppiumDriver driver;
-
-    public HomePage(AppiumDriver driver) {
-        super(driver);
-        PageFactory.initElements(driver, this);
-        this.driver = driver;
-    }
-
     @FindBy(id = "com.android.packageinstaller:id/permission_allow_button")
     private WebElement allowPermissionsBtn;
 
@@ -29,16 +22,32 @@ public class HomePage extends BasePage{
     @FindBys(@FindBy(id = "prd_search_suggestion_title"))
     private List<WebElement> productSuggestions;
 
-    public void allowPermissions(){
+    @FindBy(id = "skyfeed_cell_title")
+    private WebElement searchByCategory;
+
+    public HomePage(AppiumDriver driver) {
+        super(driver);
+        PageFactory.initElements(driver, this);
+        this.driver = driver;
+    }
+
+    public void allowPermissions() {
         waitForElementToBeVisible(allowPermissionsBtn);
         allowPermissionsBtn.click();
     }
 
-    public void searchByItem(String text){
+    public void searchByItem(String text) {
         waitForElementToBeClickable(searchIcon);
         searchIcon.click();
-        sendKeys(searchField,text);
+        sendKeys(searchField, text);
         waitForElementToBeVisible(productSuggestions.get(0));
         productSuggestions.get(0).click();
     }
+
+    public void clickOnSearchByCategory() {
+        waitForElementToBeVisible(searchByCategory);
+        searchByCategory.click();
+    }
+
+
 }

@@ -11,6 +11,7 @@ import org.openqa.selenium.support.ui.WebDriverWait;
 
 import java.time.Duration;
 import java.util.List;
+import java.util.Set;
 
 
 public class BasePage {
@@ -368,5 +369,13 @@ public class BasePage {
                 return true;
             }
         return false;
+    }
+
+    protected void switchToView(String view){
+        Set<String> contextNames = driver.getContextHandles();
+        for (String contextName : contextNames) {
+            if (contextName.contains(view))
+                driver.context(contextName);
+        }
     }
 }

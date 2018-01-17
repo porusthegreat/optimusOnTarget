@@ -11,7 +11,7 @@ public class SearchResultsTest extends BaseSteps {
     public void verifySearchResults() throws InterruptedException {
         String getTitle = resultsPage.returnTitleOfFirstElementInSearchResults();
         String verifyTitle = resultsPage.returnTitleOfElementSelected();
-        Assert.assertEquals(getTitle,verifyTitle);
-        resultsPage.swipeVerticallyOnSearchScereen();
+        Assert.assertEquals(getTitle, verifyTitle);
+        resultsPage.swipeVerticallyOnSearchScreen();
     }
 }

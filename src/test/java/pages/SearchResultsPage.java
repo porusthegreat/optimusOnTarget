@@ -42,13 +42,7 @@ public class SearchResultsPage extends BasePage {
         return singleProductTitle.getText();
     }
 
-    public void swipeVerticallyOnSearchScereen() throws InterruptedException {
-        /*Dimension size= driver.manage().window().getSize();
-        int starty=(int)(size.height*0.80);
-        int endy=(int)(size.height*0.20);
-        int startx=size.width/2;
-        new TouchAction(driver).press(startx,starty).moveTo(startx, endy).release();
-        TimeUnit.SECONDS.sleep(3);*/
+    public void swipeVerticallyOnSearchScreen() throws InterruptedException {
         scrollTo("delivery");
     }
 
