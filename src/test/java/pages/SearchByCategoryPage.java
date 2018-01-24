@@ -28,5 +28,6 @@ public class SearchByCategoryPage extends BasePage {
                 break;
             }
         }
+        waitForPageLoad();
     }
 }

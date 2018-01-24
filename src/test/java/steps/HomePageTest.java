@@ -1,6 +1,8 @@
 package steps;
 
 import cucumber.api.java.en.And;
+import cucumber.api.java.en.Then;
+import org.junit.Assert;
 import pages.HomePage;
 
 public class HomePageTest extends BaseSteps {
@@ -20,5 +22,21 @@ public class HomePageTest extends BaseSteps {
     @And("user selects search by category")
     public void user_selects_search_by_category() {
         homePage.clickOnSearchByCategory();
+    }
+
+    @And("user chooses to change store")
+    public void userChoosesToSelectStore(){
+        homePage.userChoosesToChangeStore();
+    }
+
+    @Then("user verifies the store title")
+    public void verifyStoreTitle(){
+        String storeTitle = homePage.getStoreTitle();
+        Assert.assertEquals(storeTitle, "Mankato");
+    }
+
+    @Then("user chooses to logout")
+    public void userChoosesToLogout() throws InterruptedException {
+        homePage.clickOnSignOutBtn();
     }
 }

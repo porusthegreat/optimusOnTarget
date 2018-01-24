@@ -7,14 +7,14 @@ import pages.LaunchPage;
 public class LaunchActivitySteps extends BaseSteps {
     LaunchPage helloOptimusPage = new LaunchPage(getDriverInstanceFor("optimus"));
 
-    @Given("^user in on landing and chooses to get started$")
+    @And("^user chooses to get started$")
     public void iGetAWelcomeMessageOnSuccessfulExecutionOfMyHelloOptimusProject() throws Throwable {
         helloOptimusPage.clickOnGetStartedButton();
     }
 
-    @Given("^user swipes right to see all screens$")
+    @Given("^user is on landing page and swipes right to see all screens$")
     public void userSwipesRightOnLaunchingScreen() throws InterruptedException {
-        for (int i = 0; i < 4; i++) {
+        for (int i = 0; i < 3; i++) {
             helloOptimusPage.swipeRightOnLaunchScreen();
         }
     }

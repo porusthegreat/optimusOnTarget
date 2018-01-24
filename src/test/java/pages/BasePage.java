@@ -12,6 +12,7 @@ import org.openqa.selenium.support.ui.WebDriverWait;
 import java.time.Duration;
 import java.util.List;
 import java.util.Set;
+import java.util.concurrent.TimeUnit;
 
 
 public class BasePage {
@@ -30,8 +31,7 @@ public class BasePage {
             final WebElement element) {
         return new ExpectedCondition<WebElement>() {
 
-            public ExpectedCondition<WebElement> visibilityOfElement =
-                    ExpectedConditions.visibilityOf(element);
+            public ExpectedCondition<WebElement> visibilityOfElement = ExpectedConditions.visibilityOf(element);
 
             @Override
             public WebElement apply(WebDriver driver) {
@@ -157,6 +157,11 @@ public class BasePage {
                 elem.clear();
             }
             elem.sendKeys(text);
+            try {
+                TimeUnit.SECONDS.sleep(2);
+            } catch (InterruptedException e) {
+                e.printStackTrace();
+            }
         } else {
             Assert.assertNotNull(elem.getText());
         }
@@ -371,11 +376,11 @@ public class BasePage {
         return false;
     }
 
-    protected void switchToView(String view){
-        Set<String> contextNames = driver.getContextHandles();
-        for (String contextName : contextNames) {
-            if (contextName.contains(view))
-                driver.context(contextName);
+    protected void waitForPageLoad(){
+        try {
+            TimeUnit.SECONDS.sleep(3);
+        } catch (InterruptedException e) {
+            e.printStackTrace();
         }
     }
 }

@@ -54,6 +54,9 @@ dependencies {
     testCompile(group: 'com.googlecode.lambdaj', name: 'lambdaj', version: '2.3.3')
     testCompile(group: 'org.json', name: 'json', version: '20131018')
     compile group: 'com.google.guava', name: 'guava', version: '22.0'
+    // https://mvnrepository.com/artifact/com.jcabi/jcabi-aspects
+    compile group: 'com.jcabi', name: 'jcabi-aspects', version: '0.22.6'
+
 }
 
 
