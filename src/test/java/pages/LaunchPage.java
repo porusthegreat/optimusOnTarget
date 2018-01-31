@@ -24,6 +24,7 @@ public class LaunchPage extends BasePage {
     public void clickOnGetStartedButton() {
         waitForElementToBeVisible(getStarted);
         getStarted.click();
+        waitForPageLoad();
     }
 
     public void swipeRightOnLaunchScreen() throws InterruptedException {

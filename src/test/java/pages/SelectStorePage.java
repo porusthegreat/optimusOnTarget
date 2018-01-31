@@ -63,12 +63,7 @@ public class SelectStorePage extends BasePage {
         waitForElementToBeClickable(mapSearchBar);
         mapSearchBar.click();
         waitForElementToBeVisible(mapSearchInputField);
-        Runtime rt = Runtime.getRuntime();
-        try {
-            Process process = rt.exec(new String[] {"adb", "shell", "input" ,"text", "\"56003\""});
-        } catch (IOException e) {
-            e.printStackTrace();
-        }
+        sendKeys(mapSearchInputField, pinCode);
     }
 
     public void searchSuggestionSelect() {

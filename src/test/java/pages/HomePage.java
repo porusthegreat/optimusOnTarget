@@ -25,7 +25,7 @@ public class HomePage extends BasePage {
     private List<WebElement> productSuggestions;
 
     @FindBy(id = "skyfeed_cell_title")
-    private WebElement searchByCategory;
+    private List<WebElement> searchByCategories;
 
     @FindBy(id = "shop_expanded_top_toolbar_subtitle")
     private WebElement selectStore;
@@ -64,8 +64,8 @@ public class HomePage extends BasePage {
     }
 
     public void clickOnSearchByCategory() {
-        waitForElementToBeVisible(searchByCategory);
-        searchByCategory.click();
+        waitForElementToBeVisible(searchByCategories.get(0));
+        searchByCategories.get(0).click();
         waitForPageLoad();
     }
 

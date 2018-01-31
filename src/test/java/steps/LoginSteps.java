@@ -18,9 +18,8 @@ public class LoginSteps extends BaseSteps {
     @And("user chooses to Login and gets error due to invalid credentials")
     public void userChoosesToLogin(){
         loginPage.clickOnLoginBtn();
-        String error = loginPage.typeCredentials("cd@cp.co", "test123456");
-        Assert.assertEquals("Sorry, either your e-mail or password " +
-                "didn't match what we have on file. Try it again?", error);
+        boolean error = loginPage.typeCredentials("cd@cp.co", "test123456");
+        Assert.assertTrue(error);
     }
 
     @And("user logs in with valid credentials")

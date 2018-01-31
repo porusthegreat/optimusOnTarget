@@ -1,8 +1,7 @@
 Feature: Search by category for a particular product
 
-  @helloOptimus
+  @helloOptimusx
   Scenario Outline: search for products by category
-    Given user is on landing page and swipes right to see all screens
     And user chooses to get started
     And user logs in with valid credentials
     And user allows required permissions

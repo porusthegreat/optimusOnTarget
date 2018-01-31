@@ -2,18 +2,19 @@
   "executionDetails": {
     "appium_js_path": "/usr/local/bin/appium",
     "appium_node_path": "/usr/local/bin/node",
-    "monitoring":true
+    "monitoring": true
   },
-  "testFeed":[
+  "testFeed": [
     {
-      "belongsTo":"optimus",
+      "belongsTo": "optimus",
       "runsOn": "any",
       "appDir": "app",
-      "nativeApp":true,
+      "nativeApp": true,
       "optimusDesiredCapabilities": {
         "appiumServerCapabilities": {
           "app": "Target.apk",
-          "platformName": "Android"
+          "platformName": "Android",
+          "fullReset": "true"
         },
         "androidOnlyCapabilities": {
           "appActivity": "activity.NavigationActivity",
