@@ -1,6 +1,6 @@
 Feature: Search by category for a particular product
 
-  @helloOptimus
+  @helloOptimus @Sanity
   Scenario Outline: search for products by category
     And user chooses to get started
     And user logs in with valid credentials

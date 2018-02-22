@@ -17,5 +17,5 @@ Feature: Add Payment details
     And optimus on payments screen verifies cardDetails is visible
     And user navigates back
     And optimus on Cart screen verifies checkoutBtn is visible
-    And user navigates back
+    And optimus on Cart screen tap on back
 

@@ -1,6 +1,6 @@
 Feature: Select a store
 
-  @helloOptimus
+  @helloOptimus @Sanity @fail
   Scenario Outline: Change store by pin code of the location
     And user chooses to get started
     And user chooses to skip login

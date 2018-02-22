@@ -1,6 +1,6 @@
 Feature: Tests on target app
 
-  @helloOptimus
+  @helloOptimus @Sanity
   Scenario: Search for a product and view the product in detail
     And user chooses to get started
     And user chooses to skip login

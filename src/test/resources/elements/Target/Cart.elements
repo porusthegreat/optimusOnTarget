@@ -4,7 +4,7 @@
             {
             "elementName" : "back",
             "identifier" : "id",
-            "value" : "//android.widget.ImageButton[Contains(@content-desc, 'Navigate up')]",
+            "value" : "Navigate up",
             "waitFor" : "visibility"
             },
 
@@ -14,5 +14,6 @@
             "value":"checkout",
             "waitFor":"visibility"
             }
+
         ]
 }
