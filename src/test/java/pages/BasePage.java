@@ -376,7 +376,7 @@ public class BasePage {
         return false;
     }
 
-    protected void waitForPageLoad(){
+    protected void waitForPageLoad() {
         try {
             TimeUnit.SECONDS.sleep(3);
         } catch (InterruptedException e) {

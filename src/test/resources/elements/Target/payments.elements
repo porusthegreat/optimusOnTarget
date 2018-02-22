@@ -1,0 +1,60 @@
+{
+    "elements" :
+        [
+            {
+            "elementName" : "creditCard",
+            "identifier" : "id",
+            "value" : "payment_compact_card_details",
+            "waitFor" : "visibility"
+            },
+
+            {
+            "elementName" : "cardNum",
+            "identifier" : "id",
+            "value" : "payment_card_number_text",
+            "waitFor" : "visibility"
+            },
+
+            {
+            "elementName" : "addButton",
+            "identifier" : "id",
+            "value" : "action_add",
+            "waitFor" : "visibility"
+            },
+
+            {
+            "elementName":"payment_card_expiry",
+            "identifier":"id",
+            "value":"payment_card_expiry",
+            "waitFor":"visibility"
+            },
+
+            {
+            "elementName":"security_code",
+            "identifier":"id",
+            "value":"payment_card_security_code",
+            "waitFor":"visibility"
+            },
+
+            {
+            "elementName":"address",
+            "identifier":"id",
+            "value":"address_line",
+            "waitFor":"visibility"
+            },
+
+            {
+            "elementName":"doneBtn",
+            "identifier":"id",
+            "value":"payment_card_details_button",
+            "waitFor":"visibility"
+            },
+
+            {
+            "elementName":"cardDetails",
+            "identifier":"id",
+            "value":"payment_compact_card_last_digits_text",
+            "waitFor":"visibility"
+            }
+        ]
+}

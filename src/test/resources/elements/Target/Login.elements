@@ -1,0 +1,11 @@
+{
+    "elements":
+        [
+            {
+            "elementName":"loginBtn",
+            "identifier":"id",
+            "value":"gate_login_button",
+            "waitFor":"visibility"
+            }
+        ]
+}

@@ -15,9 +15,21 @@ public class ShoesCategorySteps extends BaseSteps {
         shoes.clickOnWomenCategory();
         shoes.selectNewYearStyles();
         SearchResultsPage results = new SearchResultsPage(getDriverInstanceFor("optimus"));
-        String shoeTitle = results.returnTitleOfFirstElementInSearchResults();
+        String shoeTitle = results.returnTitleOfFirstElementInSearchResults(0);
         String singleShoe = results.returnTitleOfElementSelected();
         Assert.assertEquals(shoeTitle, singleShoe);
+    }
+
+    @And("user selects items to add to cart")
+    public void searchResults(){
+        SearchResultsPage results = new SearchResultsPage(getDriverInstanceFor("optimus"));
+        for(int i =0; i<2; i++) {
+            String title = results.returnTitleOfFirstElementInSearchResults(i);
+            String title2 = results.returnElementTitle();
+            Assert.assertEquals(title, title2);
+            results.navigateBack();
+        }
+
     }
 
 }

@@ -1,0 +1,25 @@
+{
+    "elements" :
+        [
+            {
+                "elementName" : "shippingAddress",
+                "identifier" : "id",
+                "value" : "edit_shipping_address",
+                "waitFor" : "visibility"
+            },
+
+            {
+                "elementName" : "paymentDetails",
+                "identifier" : "id",
+                "value" : "payment_compact_edit_button",
+                "waitFor" : "visibility"
+            },
+
+            {
+            "elementName" : "back",
+            "identifier" : "id",
+            "value" : "//android.widget.ImageButton[@content-desc='Navigate up']",
+            "waitFor" : "visibility"
+            }
+        ]
+}

@@ -1,0 +1,70 @@
+{
+    "elements" :
+        [
+            {
+                "elementName" : "firstname",
+                "identifier" : "id",
+                "value" : "name_first_input",
+                "waitFor" : "visibility"
+            },
+
+            {
+                "elementName" : "lastname",
+                "identifier" : "id",
+                "value" : "name_last_input",
+                "waitFor" : "visibility"
+            },
+
+
+            {
+                "elementName" : "address",
+                "identifier" : "id",
+                "value" : "address_line",
+                "waitFor" : "visibility"
+            },
+
+
+            {
+                "elementName" : "zip",
+                "identifier" : "id",
+                "value" : "address_zip_code",
+                "waitFor" : "visibility"
+            },
+
+
+            {
+                "elementName" : "city",
+                "identifier" : "id",
+                "value" : "address_city",
+                "waitFor" : "visibility"
+            },
+
+            {
+                "elementName" : "stateCode",
+                "identifier" : "id",
+                "value" : "stateCode",
+                "waitFor" : "visibility"
+            },
+
+            {
+                "elementName" : "phoneNumber",
+                "identifier" : "id",
+                "value" : "address_phone_number",
+                "waitFor" : "visibility"
+            },
+
+            {
+                "elementName" : "doneBtn",
+                "identifier" : "id",
+                "value" : "shipping_details_action_done",
+                "waitFor" : "visibility"
+            },
+
+            {
+                "elementName" : "AA",
+                "identifier" : "xpath",
+                "value" : "//android.widget.TextView[text()='AA']",
+                "waitFor":"visibility"
+            }
+        ]
+}

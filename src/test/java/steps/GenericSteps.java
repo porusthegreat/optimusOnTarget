@@ -1,6 +1,7 @@
 package steps;
 
 import com.testvagrant.commons.exceptions.OptimusException;
+import com.testvagrant.intents.exceptions.IntentException;
 import com.testvagrant.stepdefs.exceptions.NoSuchEventException;
 import cucumber.api.java.en.And;
 import cucumber.api.java.en.Given;
@@ -57,5 +58,10 @@ public class GenericSteps extends BaseSteps {
     @Given("^I am running this scenario in parrallel on IOS$")
     public void iAmRunningThisScenarioInParrallelOnIOS() throws Throwable {
         System.out.println("Something Ran");
+    }
+
+    @Given("^(Intent):(.*)$")
+    public void Intent(String action, String intentId) throws Throwable {
+        intent.run(intentId);
     }
 }

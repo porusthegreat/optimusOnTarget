@@ -1,5 +1,6 @@
 package steps;
 
+import cucumber.api.java.en.And;
 import cucumber.api.java.en.Then;
 import org.junit.Assert;
 import pages.SearchResultsPage;
@@ -15,8 +16,14 @@ public class SearchResultsTest extends BaseSteps {
 
     @Then("user verifies search results")
     public void verifySearchResults() {
-        String getTitle = resultsPage.returnTitleOfFirstElementInSearchResults();
+        String getTitle = resultsPage.returnTitleOfFirstElement();
         String verifyTitle = resultsPage.returnTitleOfElementSelected();
         Assert.assertEquals(getTitle, verifyTitle);
     }
+
+    @And("user navigates back")
+    public void userNavigatesBck(){
+        resultsPage.navigateBack();
+    }
 }
+

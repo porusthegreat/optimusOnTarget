@@ -39,4 +39,9 @@ public class HomePageTest extends BaseSteps {
     public void userChoosesToLogout() throws InterruptedException {
         homePage.clickOnSignOutBtn();
     }
+
+    @And("user scrolls to bottom")
+    public void scrollToBottom(){
+        homePage.scrollDownToEnd();
+    }
 }

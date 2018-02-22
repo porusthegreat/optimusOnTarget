@@ -1,0 +1,17 @@
+{
+    "elements" : [
+        {
+            "elementName" : "limitedDeals",
+            "identifier" : "xpath",
+            "value" : "//android.widget.FrameLayout[@content-desc='Limited-time deal 30% off bed & bath.* Online only, ends Thursday.']",
+            "waitFor":"visibility"
+        },
+
+        {
+            "elementName":"Bedding",
+            "identifier":"id",
+            "value":"Bedding sets & collections",
+            "waitFor":"visibility"
+        }
+    ]
+}

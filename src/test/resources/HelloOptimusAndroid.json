@@ -13,8 +13,7 @@
       "optimusDesiredCapabilities": {
         "appiumServerCapabilities": {
           "app": "Target.apk",
-          "platformName": "Android",
-          "fullReset": "true"
+          "platformName": "Android"
         },
         "androidOnlyCapabilities": {
           "appActivity": "activity.NavigationActivity",

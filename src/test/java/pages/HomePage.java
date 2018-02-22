@@ -1,11 +1,13 @@
 package pages;
 
 import io.appium.java_client.AppiumDriver;
+import io.appium.java_client.TouchAction;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.FindBys;
 import org.openqa.selenium.support.PageFactory;
 
+import java.time.Duration;
 import java.util.List;
 import java.util.concurrent.TimeUnit;
 
@@ -93,5 +95,13 @@ public class HomePage extends BasePage {
         waitForElementToBeVisible(cartBtn);
         cartBtn.click();
         waitForPageLoad();
+    }
+
+    public void scrollDownToEnd(){
+        int height = driver.manage().window().getSize().getHeight();
+        new TouchAction(driver).press(5, height * 3 / 5)
+                .waitAction(Duration.ofMillis(1000))
+                .moveTo(5, height / 4)
+                .release().perform();
     }
 }

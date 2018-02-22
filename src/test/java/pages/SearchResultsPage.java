@@ -37,7 +37,17 @@ public class SearchResultsPage extends BasePage {
         this.driver = driver;
     }
 
-    public String returnTitleOfFirstElementInSearchResults() {
+    public String returnTitleOfFirstElementInSearchResults(int num) {
+        waitForPageLoad();
+        waitForPageLoad();
+        waitForElementToBeVisible(searchResults.get(num));
+        String str =  searchResults.get(num).getText();
+        searchResults.get(num).click();
+        waitForPageLoad();
+        return str;
+    }
+
+    public String returnTitleOfFirstElement(){
         waitForElementToBeVisible(searchResults.get(0));
         String str =  searchResults.get(0).getText();
         searchResults.get(0).click();
@@ -46,14 +56,25 @@ public class SearchResultsPage extends BasePage {
     }
 
     public String returnTitleOfElementSelected() {
+        waitForPageLoad();
         waitForElementToBeVisible(singleProductTitle);
-        return singleProductTitle.getText();
+        String str = singleProductTitle.getText();
+        return str;
+    }
+
+    public String returnElementTitle(){
+        waitForPageLoad();
+        waitForElementToBeVisible(singleProductTitle);
+        String str = singleProductTitle.getText();
+        selectSizeOfShoes();
+        addItemToCart();
+        return str;
     }
 
     public void selectSizeOfShoes() {
         scrollDownTo("delivery");
-        waitForElementToBeVisible(sizes.get(0));
-        sizes.get(0).click();
+        waitForElementToBeVisible(sizes.get(1));
+        sizes.get(1).click();
 
     }
 

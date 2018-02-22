@@ -1,0 +1,11 @@
+{
+    "elements" :
+        [
+            {
+                "elementName" : "homeItems",
+                "identifier" : "id",
+                "value" : "skyfeed_grid",
+                "waitFor" : "visibility"
+            }
+        ]
+}

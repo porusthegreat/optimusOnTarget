@@ -1,19 +1,11 @@
 package pages;
 
 import io.appium.java_client.AppiumDriver;
-import io.appium.java_client.MobileBy;
-import org.openqa.selenium.By;
 import org.openqa.selenium.NoSuchElementException;
-import org.openqa.selenium.TimeoutException;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindAll;
 import org.openqa.selenium.support.FindBy;
-import org.openqa.selenium.support.FindBys;
 import org.openqa.selenium.support.PageFactory;
-
-import javax.naming.Context;
-import java.util.Set;
-import java.util.concurrent.TimeUnit;
 
 public class LoginPage extends BasePage {
     private AppiumDriver driver;
@@ -24,14 +16,17 @@ public class LoginPage extends BasePage {
     @FindBy(id = "gate_login_button")
     private WebElement loginBtn;
 
-    @FindBy(xpath = "//*[contains(@text, 'email')]")
+    @FindBy(id = "username")
     private WebElement emailField;
 
-    @FindBy(xpath = "//*[contains(@text, 'password')]")
+    @FindBy(id = "password")
     private WebElement passwordField;
 
     @FindBy(id = "login")
     private WebElement signInBtn;
+
+    @FindBy(id = "keepMeSignedIn")
+    private WebElement keepMeSignedIn;
 
     @FindAll({
             @FindBy(xpath = "//*[contains(@text, 'Sorry')]"),
@@ -75,16 +70,18 @@ public class LoginPage extends BasePage {
     }
 
     public void typeValidCredentials(String email, String pwd) {
-        waitForElementToBeVisible(emailField);
-        emailField.click();
-        emailField.sendKeys(email);
-        waitForPageLoad();
-        waitForElementToBeVisible(passwordField);
-        passwordField.click();
-        passwordField.sendKeys(pwd);
-        signInBtn.click();
-        waitForPageLoad();
-        waitForElementToBeVisible(returnToAppBtn);
-        returnToAppBtn.click();
+            waitForElementToBeVisible(emailField);
+            emailField.click();
+            emailField.sendKeys(email);
+            waitForPageLoad();
+            waitForElementToBeVisible(passwordField);
+            passwordField.click();
+            passwordField.sendKeys(pwd);
+            waitForElementToBeVisible(keepMeSignedIn);
+            keepMeSignedIn.click();
+            signInBtn.click();
+            waitForPageLoad();
+            waitForElementToBeVisible(returnToAppBtn);
+            returnToAppBtn.click();
     }
 }
