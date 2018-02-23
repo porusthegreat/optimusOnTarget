@@ -2,6 +2,7 @@ package pages;
 
 import io.appium.java_client.AppiumDriver;
 import io.appium.java_client.TouchAction;
+import org.openqa.selenium.TimeoutException;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.FindBys;
@@ -52,8 +53,12 @@ public class HomePage extends BasePage {
     }
 
     public void allowPermissions() {
-        waitForElementToBeVisible(allowPermissionsBtn);
-        allowPermissionsBtn.click();
+        try {
+            waitForElementToBeVisible(allowPermissionsBtn);
+            allowPermissionsBtn.click();
+        }catch (TimeoutException e ){
+            e.printStackTrace();
+        }
     }
 
     public void searchByItem(String text) {
