@@ -13,6 +13,13 @@
             "identifier":"id",
             "value":"checkout",
             "waitFor":"visibility"
+            },
+
+            {
+            "elementName":"cartValue",
+            "identifier":"id",
+            "value":"order_summary_subtotal_value",
+            "waitFor":"visibility"
             }
 
         ]

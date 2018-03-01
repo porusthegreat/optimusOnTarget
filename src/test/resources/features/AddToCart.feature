@@ -11,7 +11,7 @@ Feature: Add to cart and add payment and shipping details
     And optimus on HomeDeals screen tap on limitedDeals
     And optimus on HomeDeals screen tap on Bedding
     And user selects items to add to cart
-    And user navigates to cart screen to pay bills
+    And user navigates to cart screen to pay bills and verify amount
     And Intent:ShippingAddress
     And Intent:Payment
     Then user chooses to logout

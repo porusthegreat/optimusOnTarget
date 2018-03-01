@@ -23,6 +23,9 @@ public class CartPage extends BasePage{
     @FindBy(id = "title")
     private List<WebElement> options;
 
+    @FindBy(id = "order_summary_subtotal_value")
+    private WebElement cartValue;
+
     public CartPage(AppiumDriver driver) {
         super(driver);
         PageFactory.initElements(driver, this);
@@ -34,6 +37,12 @@ public class CartPage extends BasePage{
         checkoutBtn.click();
         waitForPageLoad();
         return pageTitle.getText();
+    }
+
+    public String getCartValue(){
+        scrollDownTo("subtotal");
+        waitForElementToBeVisible(cartValue);
+        return cartValue.getText();
     }
 
     public void emptyCartItems() {
